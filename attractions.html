@@ -4,8 +4,346 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf91e26bd5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div id="backdrop"></div>
+    <div class="hero-background">
+        <!-- <img src="assets/images/hero.jpg" class="img-position" alt="" srcset=""> -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-white" href="#">Iceland Travel.</a>
+            <div class="hamburger ml-auto d-lg-none">
+                <div class="line top"></div>
+                <div class="line middle mt-2"></div>
+                <div class="line bottom mt-2"></div>
+            </div>
+            <div class="nav-links ml-lg-auto">
+                <ul class="navbar-nav sidenav">
+                    <li>
+                        <a class="closebtn" >&times;</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="index.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Discover<span class="sr-only">(current)</span></a>
+                    </li>
+                    <hr>
+                    <li class="nav-item active-li-element">
+                        <a class="nav-link text-lg-white active-ancor" href="attractions.html"><i class="fas fa-user-tie d-lg-none"></i> Attractions</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="locations.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Locations</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="contact-us.html"><i class="fas fa-envelope-open-text d-lg-none"></i> Contact Us</a>
+                    </li>
+                    <hr>
+                    <li class="text-center d-flex d-lg-none align-items-center justify-content-center h-100">
+                        <a class="brand-sidenav text-white font-weight-bold" href="#">Iceland Travel.</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <header class="callout-container-img-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 hero-background-color">
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <h1 class="text-white">Discover Amazing Attractions <br class="d-none d-lg-block">In Iceland.</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <p class="lead text-white mt-4 mb-3 d-none d-lg-block">Witnes nature's most magical moments.
+                                In a country whos landscape has been painted <br>by ice and fire.
+                                Glaze upon its unspoild nature while enjoying many of its wonders.
+                                <br>Iceland, a place like no other.</p>
+                            <p class="text-white lead ">
+                                Use our site to search for attractions, nature wonders, hotels and more. <br> Click the
+                                button bellow to start.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <a class="btn btn-primary text-uppercase" href="#" role="button">Search</a>
+                        </div>
+                    </div>
+                    <!-- <input class="ml-3" type="text" placeholder="What would you like to do?">
+                            <input class="ml-3" type="text" placeholder="Where would you like to go?"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container hero-fmore--position">
+        <div class="row">
+            <!-- Your Personal Travel Guide -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-lg-3 text-left text-lg-right">
+                        <div class="col-12 mb-1 icon-font-size"><i class="fas fa-user-tie"></i></div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="mb-4">Your Personal Travel Guide</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>All you need to know about Icelands attractions and more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center mt-lg-4">
+                         <p>Note: Use the button found under article's text, to reveal full article text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container" id="attractions-articles">
+            <div class="row">
+                <div class="d-lg-none col-12">
+                    <img class="img-fluid" src="assets/images/section1-1picture.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1">Blue Lagoon</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3">The Blue Lagoon, a geothermal spa, is located on a lava field near Grindavik.
+                                It was first discovered in the early 1980s by local residents as they were the first ones to
+                                use these water reservoirs to bathe.
+                                The bioactive properties of Blue Lagoon’s geothermal water, give the water its healing
+                                properties making it not only a good place for relaxation and pleasure but also a place of
+                                health and wellbeing.
+                                <span class="bluelagoon">The water has a milky blue shade due to high concentration of
+                                    silica.
+                                    Silica forms soft white mud on the bottom of the lake which visitors use to rub on
+                                    themselves.
+                                    Because Blue Lagoon is man-made, water that formed reservoirs is a byproduct of nearby
+                                    geothermal power plant, “Svartsengi”.
+                                    In 2018, “Retreat at Blue Lagoon Iceland” was built, it is a luxurious geothermal resort
+                                    containing luxy hotel, subterranean spa, terraced lagoon, and a restaurant.
+                                    This is a place where visitors can stay and enjoy in harmonic convergence of nature,
+                                    design, and science.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="bluelagoon">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid vertical-center" src="assets/images/section1-1picture.jpg" alt="">
+                </div>
+            </div>
     
+            <div class="row mt-4">
+                <div class="col-12 d-lg-none">
+                    <img class="img-fluid" src="assets/images/section1-2picture.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1">South Iceland</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3">Southern part of Iceland with a total population of 28,399 has some of the most
+                                amazing natural attractions that Iceland has to offer. Reynisfjara beach can be located in
+                                this region.
+                                It is Iceland’s most beautiful and famous beach.
+                                What sets it apart from other beaches is black volcanic sand, moody atmosphere, and uniquely
+                                interesting rock formations.
+                                <span class="southiceland">Some other attractions worth mentioning that this part of Iceland
+                                    has to offer are: hot spring Geyser, Gullfoss The Golden Waterfall, Two National Parks,
+                                    Glacier Lagoon, and Dverghamrar Dwarf Cliffs.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="southiceland">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid vertical-center" src="assets/images/section1-2picture.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="row mt-4">
+                <div class="col-12 d-lg-none">
+                    <img class="img-fluid" src="assets/images/section1-3picture.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1">Glaciers</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3">Iceland is also known for its Ice cap, the second largest largest ice cap in europe. Vatnajokull also known as Vatna Glacier is an ice glacier with an area of 7,900km2. 
+                                What is really fascinating about this ice cap is that It covers about 8% of Iceland’s country, and dates all the way back to the period of ice age. 
+                                One of the most visited tourist attractions of this place is Breidamerkurjokull. 
+                                <span class="glaciers">This outlet glacier can be found near the small ice lagoon Jokulsarlon. 
+                                Over the years as ice melts from geothermal activities of volcanoes that help ice melt, caves form inside of the ice mountains in this area. 
+                                Tourists can visit these caves with local guides and experience how it is to be inside a mountain of ice.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="glaciers">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid vertical-center" src="assets/images/section1-3picture.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12 d-lg-none">
+                    <img class="img-fluid" src="assets/images/section1-4picture.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1">Northern Lights</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3">One of Iceland’s greatest natural attractions are the Northern Lights. 
+                                What makes them so special is that they occur unpredictably and thus can not be seen as often. 
+                                If you are visiting Iceland and want to go on a hunt for Northern Lights, the best time of the year for this is during November, December and January. 
+                                During these three months, nights in Iceland are the darkest giving you more time to search for auroras. 
+                                <span class="northern-lights">However this time of the year is also when Iceland experiences storms and snow. 
+                                This can lead to cloudy skies blocking your view of Northern Lights. 
+                                However nevertheless you can always visit other famous attractions during this time of the year such as Glacier caves.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="northern-lights">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid vertical-center" src="assets/images/section1-4picture.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 d-lg-none">
+                    <img class="img-fluid" src="assets/images/section1-5picture.jpg" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1">National Parks</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3">Iceland has a total of three National Parks: Thingvellir, Vatnajokull and Snæfellsjökull. 
+                                Each of the three parks encapsulate some of Iceland's most respectful geological, historical and cultural areas of the country. 
+                                Inside Thingvellir is Iceland’s oldest national park. Here visitors can witness the beauty of “Lake Of The Parliament”. 
+                                Bottom of this lake was naturally formed by an eruption of a volcano that happened about 9000 years ago. 
+                                <span class="national-parks">Today the lake covers 84m2 of land and is the first thing that visitors who travel from the capital to national park, can see before entering the park. 
+                                Thingvellir park is also known for being the only place in Europe where visitors can see both North American and Eurasian tectonic plates. 
+                                Vatnajokull is Iceland’s largest national park. It got its name after Vatna Glacier, where visitors can go and explore ice caves, vitness countries' tallest mountain tops and highest waterfalls.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="national-parks">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid vertical-center" src="assets/images/section1-5picture.jpg" alt="">
+                </div>
+            </div> 
+        </div>
+    </section>
+    <footer class="footer--position">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-lg-flex align-items-center text-center p-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-white">Iceland Travel.</h2>
+                        </div>
+                    </div>
+                    <div class="row d-flex d-lg-none">
+                        <div class="col-12 d-flex justify-content-around text-center">
+                            <a href="http://www.instagram.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="http://www.twitter.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="http://www.facebook.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-6 p-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <h3 class="text-white">Locations</h3>
+                                </li>
+                                <li><a href="" class="text-white">Reykjavik</a></li>
+                                <li><a href="" class="text-white">Egilsstadir</a></li>
+                                <li><a href="" class="text-white">Hofn</a></li>
+                                <li><a href="" class="text-white">Vik</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <h3 class="text-white">Social Media</h3>
+                                </li>
+                                <li><a href="http://www.facebook.com" class="text-white" target="_blank">Facebook</a></li>
+                                <li><a href="http://www.twitter.com" class="text-white" target="_blank">Twitter</a></li>
+                                <li><a href="http://www.instagram.com" class="text-white" target="_blank">Instagram</a></li>
+                                <li><a href="http://www.youtube.com" class="text-white" target="_blank">Youtube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="assets/script/googleMap.js"></script>
+    <script src="assets/script/javaScript.js"></script>
+    
+
+
 </body>
 </html>
