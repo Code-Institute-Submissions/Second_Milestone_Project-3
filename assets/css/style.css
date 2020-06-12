@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: Lato, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -12,7 +13,9 @@
 /* Typography */
 html {
     font-size: 1rem;
-    transform: 0.5s;
+    -webkit-transform: 0.5s;
+        -ms-transform: 0.5s;
+            transform: 0.5s;
   }
 
   h2 {
@@ -66,9 +69,13 @@ html {
     z-index: 200; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#373B44), to(#4286f4));
+    background: -o-linear-gradient(top, #373B44, #4286f4);
     background: linear-gradient(to bottom, #373B44, #4286f4);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
 
@@ -78,6 +85,8 @@ html {
     font-size: 25px;
     color: #fff;
     display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     margin-left: 2rem;
   }
@@ -110,7 +119,10 @@ html {
       width: 2.4rem;
       height: 0.3rem;
       background: #E9F1F7;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
       transition: 0.5s;
   }
 
@@ -130,13 +142,16 @@ html {
     font-size: 25px;
     color: #fff;
     display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     margin-left: initial;
   }
 
   .active-li-element {
     border-left: solid 6px #fff;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
 @media (min-width: 576px) {
@@ -154,6 +169,8 @@ html {
     background: transparent; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: initial; /* Place content 60px from the top */
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   
@@ -191,12 +208,14 @@ html {
 }
 
 .active-li-element {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-left: none;
 }
 
 .active-ancor {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-bottom: solid 4px #007BEA;
 }
 }
@@ -226,13 +245,6 @@ html {
     border-radius: 10px;
 }
 
-  /* .img-position{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-  } */
-
   .hero-background {
     position: absolute;
     top: 0;
@@ -252,7 +264,8 @@ html {
     padding: 2.5rem;
     top: -4rem;
     background: #fff;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
+            box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 .link--position-bottom {
@@ -266,8 +279,9 @@ html {
 
 .icon-font-size {
     font-size: 3rem;
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #373B44;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#4286f4), to(#373B44));
+    background: -o-linear-gradient(left, #4286f4, #373B44);
     background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -293,7 +307,8 @@ html {
 } */
 
 .overlay-color--black {
-  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .section1-img-text--position {
@@ -359,6 +374,8 @@ html {
   color: #fff;
   left: 1.5rem;
   height: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -417,4 +434,44 @@ html {
 .btn {
     border-radius: 0; 
     
+}
+
+/* Contact Us page */
+
+  label {
+    display: block;
+  }
+
+  .contact-form-background--color {
+    background: -webkit-gradient(linear, left top, right top, from(#373B44), to(#4286f4));
+    background: -o-linear-gradient(left, #373B44, #4286f4);
+    background: linear-gradient(to right, #373B44, #4286f4);
+  }
+  
+
+  .footer-contact-us--position {
+    background: #0E1D28;
+  }
+
+  .contact-form-input {
+    border: 0;
+    background: #fff;
+    color: #4a4a4a;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    
+  }
+  
+  .contact-form-input::-webkit-input-placeholder {
+    text-align: start;
+  }
+
+  .contact-form-text {
+    max-width: 100%;
+    width: 25rem;
+    max-height: 150px;
+    padding: 30px 60px 30px 25px;
+    resize: none;
+    height: auto;
 }

@@ -4,8 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf91e26bd5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_uMuGSSF3tAvdDaO6bEES3");
+        })();
+    </script>
 </head>
 <body>
-    
+    <div id="backdrop"></div>
+    <div class="hero-background">
+        <!-- <img src="assets/images/hero.jpg" class="img-position" alt="" srcset=""> -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-white" href="#">Iceland Travel.</a>
+            <div class="hamburger ml-auto d-lg-none">
+                <div class="line top"></div>
+                <div class="line middle mt-2"></div>
+                <div class="line bottom mt-2"></div>
+            </div>
+            <div class="nav-links ml-lg-auto">
+                <ul class="navbar-nav sidenav">
+                    <li>
+                        <a class="closebtn" >&times;</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="index.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Discover<span class="sr-only">(current)</span></a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="attractions.html"><i class="fas fa-user-tie d-lg-none"></i> Attractions</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link text-lg-white" href="locations.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Locations</a>
+                    </li>
+                    <hr>
+                    <li class="nav-item active-li-element">
+                        <a class="nav-link text-lg-white active-ancor" href="contact-us.html"><i class="fas fa-envelope-open-text d-lg-none"></i> Contact Us</a>
+                    </li>
+                    <hr>
+                    <li class="text-center d-flex d-lg-none align-items-center justify-content-center h-100">
+                        <a class="brand-sidenav text-white font-weight-bold" href="#">Iceland Travel.</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <header class="callout-container-img-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 hero-background-color">
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <h1 class="text-white">Discover Amazing Attractions <br class="d-none d-lg-block">In Iceland.</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <p class="lead text-white mt-4 mb-3 d-none d-lg-block">Witnes nature's most magical moments.
+                                In a country whos landscape has been painted <br>by ice and fire.
+                                Glaze upon its unspoild nature while enjoying many of its wonders.
+                                <br>Iceland, a place like no other.</p>
+                            <p class="text-white lead ">
+                                Use our site to search for attractions, nature wonders, hotels and more. <br> Click the
+                                button bellow to start.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center text-lg-left">
+                            <a class="btn btn-primary text-uppercase" href="#" role="button">Search</a>
+                        </div>
+                    </div>
+                    <!-- <input class="ml-3" type="text" placeholder="What would you like to do?">
+                            <input class="ml-3" type="text" placeholder="Where would you like to go?"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container hero-fmore--position">
+        <div class="row">
+            <!-- Your Personal Travel Guide -->
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-lg-3 text-left text-lg-right">
+                        <div class="col-12 mb-1 icon-font-size"><i class="fas fa-envelope-open-text"></i></div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="mb-4">Do you have any questions you would like to ask? Feel free too contact us!</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Use the form bellow to send us an email. We will do our best to anwser all of your questions as soon as possible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="contact-form-background--color p-4">
+        <div class="container">
+            <form id="contactForm">
+                <div class="row">
+                <div class="col-12 text-center">
+                    <label for="full-name" class="text-white">Full Name</label>
+                    <input class="contact-form-input" type="text" name="from_name" placeholder="Your full name" required />
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-12 mt-4 text-center">
+                    <label for="email" class="text-white">Email Adress</label>
+                    <input class="contact-form-input" type="email" name="from_email" placeholder="Email@hotmail.com" required>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-12 mt-4 text-center">
+                    <label for="text" class="text-white">Message</label>
+                    <textarea class="contact-form-text" type="text" name="form_message" required></textarea>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-12 mt-4 text-center">
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer-contact-us--position">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 d-lg-flex align-items-center text-center p-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="text-white">Iceland Travel.</h2>
+                        </div>
+                    </div>
+                    <div class="row d-flex d-lg-none">
+                        <div class="col-12 d-flex justify-content-around text-center">
+                            <a href="http://www.instagram.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="http://www.twitter.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="http://www.facebook.com" class="text-white footer-icon--size" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-6 p-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <h3 class="text-white">Locations</h3>
+                                </li>
+                                <li><a href="" class="text-white">Reykjavik</a></li>
+                                <li><a href="" class="text-white">Egilsstadir</a></li>
+                                <li><a href="" class="text-white">Hofn</a></li>
+                                <li><a href="" class="text-white">Vik</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <h3 class="text-white">Social Media</h3>
+                                </li>
+                                <li><a href="http://www.facebook.com" class="text-white" target="_blank">Facebook</a></li>
+                                <li><a href="http://www.twitter.com" class="text-white" target="_blank">Twitter</a></li>
+                                <li><a href="http://www.instagram.com" class="text-white" target="_blank">Instagram</a></li>
+                                <li><a href="http://www.youtube.com" class="text-white" target="_blank">Youtube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="assets/script/javaScript.js"></script>
+    <script src="assets/script/sendEmail.js"></script>
+
+
 </body>
 </html>
