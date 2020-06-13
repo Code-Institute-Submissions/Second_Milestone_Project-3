@@ -8,17 +8,18 @@ var countryRestrict = { 'country': 'IS' };
 var articleTemplate = document.getElementById('article-template').content;
 var articlesContainer = document.getElementById('articles-container');
 
-var templateHtmlCopy = document.importNode(articleTemplate, true);
-
-function importArticles(templateHtmlCopy, articlesContainer) {
-    
-    console.log(templateHtmlCopy);
+function importArticles(articlesContainer) {
     $.getJSON("assets/ajax/articles.json", function (data) {
-       console.log(data);
+        for (i = 0; i < data.length; i++) {
+            var templateHtmlCopy = document.importNode(articleTemplate, true);
+            templateHtmlCopy.querySelector('.article-mobile-image').setAttribute('src', data[i].articleImage);
+            templateHtmlCopy.querySelector('.article-heading').textContent = data[i].articleHeading;
+            templateHtmlCopy.querySelector('.article-paragraph').innerHTML = data[i].articleParagraph + '<span class="d-none">' + data[i].articleHiddenParagraph + '</span>';
+            templateHtmlCopy.querySelector('.article-desktop-image').setAttribute('src', data[i].articleImage);
+            articlesContainer.appendChild(templateHtmlCopy);
+        }
     });
 }
-
-importArticles (templateHtmlCopy, articlesContainer);
 //Initializing fucntion
 function initialize() {
     initMap();
@@ -53,6 +54,7 @@ function initMap() {
     document.getElementById('src-btn').addEventListener('click', function () {
         deleteMarkers();
         geocodeAddress(geocoder, map, selectType[0]);
+        importArticles (articlesContainer);
     });
 }
 
