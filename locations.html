@@ -135,9 +135,10 @@
             </div>
         </div>
     </div>
-    <div id="article-container-onbtnclick">
-
+    <div class="container" id="articles-container">
+    
     </div>
+    
     <footer class="footer-contact-us--position">
         <div class="container">
             <div class="row">
@@ -184,6 +185,36 @@
             </div>
         </div>
     </footer>
+    <template id="article-template">
+        <div class="row">
+                <div class="d-lg-none col-12">
+                    <img class="img-fluid article-mobile-image" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="mt-4 mt-lg-1 article-heading"></h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="mt-3 article-paragraph">
+                                <span class="article-hidden-paragraph">
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-primary attractions-btn" data-value="bluelagoon">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-6">
+                    <img class="img-fluid article-desktop-image vertical-center" alt="">
+                </div>
+            </div>
+    </template>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
