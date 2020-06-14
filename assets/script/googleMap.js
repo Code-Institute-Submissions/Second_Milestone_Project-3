@@ -8,18 +8,7 @@ var countryRestrict = { 'country': 'IS' };
 var articleTemplate = document.getElementById('article-template').content;
 var articlesContainer = document.getElementById('articles-container');
 
-function importArticles(articlesContainer) {
-    $.getJSON("assets/ajax/articles.json", function (data) {
-        for (i = 0; i < data.length; i++) {
-            var templateHtmlCopy = document.importNode(articleTemplate, true);
-            templateHtmlCopy.querySelector('.article-mobile-image').setAttribute('src', data[i].articleImage);
-            templateHtmlCopy.querySelector('.article-heading').textContent = data[i].articleHeading;
-            templateHtmlCopy.querySelector('.article-paragraph').innerHTML = data[i].articleParagraph + '<span class="d-none">' + data[i].articleHiddenParagraph + '</span>';
-            templateHtmlCopy.querySelector('.article-desktop-image').setAttribute('src', data[i].articleImage);
-            articlesContainer.appendChild(templateHtmlCopy);
-        }
-    });
-}
+
 //Initializing fucntion
 function initialize() {
     initMap();
@@ -54,7 +43,7 @@ function initMap() {
     document.getElementById('src-btn').addEventListener('click', function () {
         deleteMarkers();
         geocodeAddress(geocoder, map, selectType[0]);
-        importArticles (articlesContainer);
+        importArticles(articlesContainer);
     });
 }
 
@@ -156,6 +145,31 @@ function deleteMarkers() {
     nearbyPlaces = [];
 }
 
-function getArticles() {
+function importArticles(articlesContainer) {
+    $.getJSON("assets/ajax/articles.json", function (data) {
+        for (i = 0; i < data.length; i++) {
+            var templateHtmlCopy = document.importNode(articleTemplate, true);
+            let hiddenText = '.' + data[i].spanClass;
+            let btnId = '#' + data[i].spanClass;
+            
+            templateHtmlCopy.querySelector('.article-mobile-image').setAttribute('src', data[i].articleImage);
+            templateHtmlCopy.querySelector('.article-heading').textContent = data[i].articleHeading;
+            templateHtmlCopy.querySelector('.article-paragraph').innerHTML = data[i].articleParagraph + '<span class="' + data[i].spanClass + ' article-hidden-paragraph' + '">' + data[i].articleHiddenParagraph + '</span>';
+            templateHtmlCopy.querySelector('.article-desktop-image').setAttribute('src', data[i].articleImage);
+            templateHtmlCopy.querySelector('.attractions-btn').setAttribute('data-value', data[i].spanClass);
+            templateHtmlCopy.querySelector('.attractions-btn').setAttribute('id', data[0].spanClass);
+            
+                
+            articlesContainer.appendChild(templateHtmlCopy);
+            
+            
+        };
+        $('.article-hidden-paragraph').hide();
+        $('.attractions-btn').on('click',function(event) {
+        let dataValue = $(this).attr("data-value");
+        let hiddenText = '.' + dataValue;
 
-};
+        $(hiddenText).slideToggle('slow');
+})
+    });
+}
