@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script>
         (function () {
             emailjs.init("user_uMuGSSF3tAvdDaO6bEES3");
         })();
@@ -19,7 +19,6 @@
 <body>
     <div id="backdrop"></div>
     <div class="hero-background">
-        <!-- <img src="assets/images/hero.jpg" class="img-position" alt="" srcset=""> -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand text-white" href="#">Iceland Travel.</a>
             <div class="hamburger ml-auto d-lg-none">
@@ -32,23 +31,33 @@
                     <li>
                         <a class="closebtn" >&times;</a>
                     </li>
-                    <hr>
+                    <li class="d-lg-none">
+                        <hr>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-lg-white" href="index.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Discover<span class="sr-only">(current)</span></a>
                     </li>
-                    <hr>
+                    <li class="d-lg-none">
+                        <hr>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-lg-white" href="attractions.html"><i class="fas fa-user-tie d-lg-none"></i> Attractions</a>
                     </li>
-                    <hr>
+                    <li class="d-lg-none">
+                        <hr>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-lg-white" href="locations.html"><i class="fas fa-map-marked-alt d-lg-none"></i> Locations</a>
                     </li>
-                    <hr>
+                    <li class="d-lg-none">
+                        <hr>
+                    </li>
                     <li class="nav-item active-li-element">
                         <a class="nav-link text-lg-white active-ancor" href="contactus.html"><i class="fas fa-envelope-open-text d-lg-none"></i> Contact Us</a>
                     </li>
-                    <hr>
+                    <li class="d-lg-none">
+                        <hr>
+                    </li>
                     <li class="text-center d-flex d-lg-none align-items-center justify-content-center h-100">
                         <a class="brand-sidenav text-white font-weight-bold" href="#">Iceland Travel.</a>
                     </li>
@@ -82,15 +91,12 @@
                             <a class="btn btn-primary text-uppercase" href="#" role="button">Search</a>
                         </div>
                     </div>
-                    <!-- <input class="ml-3" type="text" placeholder="What would you like to do?">
-                            <input class="ml-3" type="text" placeholder="Where would you like to go?"> -->
                 </div>
             </div>
         </div>
     </header>
     <div class="container hero-fmore--position">
         <div class="row">
-            <!-- Your Personal Travel Guide -->
             <div class="col-12">
                 <div class="row">
                     <div class="col-12 col-lg-3 text-left text-lg-right">
@@ -112,25 +118,25 @@
             </div>
         </div>
     </div>
-    <section class="contact-form-background--color p-4">
+    <div class="contact-form-background--color p-4">
         <div class="container">
             <form id="contactForm">
                 <div class="row">
                 <div class="col-12 text-center">
                     <label for="full-name" class="text-white">Full Name</label>
-                    <input class="contact-form-input" type="text" name="from_name" placeholder="Your full name" required />
+                    <input class="contact-form-input" type="text" id="full-name" name="from_name" placeholder="Your full name" required />
                 </div>
                 </div>
                 <div class="row">
                 <div class="col-12 mt-4 text-center">
                     <label for="email" class="text-white">Email Adress</label>
-                    <input class="contact-form-input" type="email" name="from_email" placeholder="Email@hotmail.com" required>
+                    <input class="contact-form-input" type="email" id="email" name="from_email" placeholder="Email@hotmail.com" required>
                 </div>
                 </div>
                 <div class="row">
                 <div class="col-12 mt-4 text-center">
                     <label for="text" class="text-white">Message</label>
-                    <textarea class="contact-form-text" type="text" name="form_message" required></textarea>
+                    <textarea class="contact-form-text" id="text" name="form_message" required></textarea>
                 </div>
                 </div>
                 <div class="row">
@@ -140,7 +146,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </div>
     <footer class="footer-contact-us--position">
         <div class="container">
             <div class="row">
