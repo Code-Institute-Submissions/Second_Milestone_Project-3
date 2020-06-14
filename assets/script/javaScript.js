@@ -5,11 +5,13 @@ const closebtn = document.querySelectorAll(".closebtn");
 $(hamburger).click(function() {
     $(".sidenav").addClass("menu-width");
     $("#backdrop").addClass("backdrop");
+    $("body").addClass("scroll-prevent");
 })
 
 $(closebtn).click(function() {
     $(".sidenav").removeClass("menu-width");
     $("#backdrop").removeClass("backdrop");
+    $("body").removeClass("scroll-prevent")
 })
   
 $('span').hide();

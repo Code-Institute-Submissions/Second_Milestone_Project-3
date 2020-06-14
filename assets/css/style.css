@@ -154,6 +154,11 @@ html {
             box-sizing: border-box;
   }
 
+.scroll-prevent {
+  height: 100vh;
+  overflow: hidden;
+}
+
 @media (min-width: 576px) {
   
 }
@@ -217,6 +222,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: solid 4px #007BEA;
+}
+
+.scroll-prevent {
+  height: initial;
+  overflow: initial;
 }
 }
 
