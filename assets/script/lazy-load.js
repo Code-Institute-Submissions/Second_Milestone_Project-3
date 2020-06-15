@@ -1,4 +1,4 @@
-const images = document.querySelectorAll('[data-src]');
+const images = document.querySelectorAll('img');
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in')
 
