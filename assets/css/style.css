@@ -775,7 +775,7 @@ option {
 
 /* Lazy Load */
 
-.fade-in {
+/* .fade-in {
   opacity: 0;
   transition: opacity 250ms ease-in;
 }
@@ -808,4 +808,4 @@ option {
     transform: translateX(0);
     opacity: 1;
 }
-
+ */
