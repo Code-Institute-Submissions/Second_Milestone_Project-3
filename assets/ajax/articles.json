@@ -33,5 +33,19 @@
         "articleParagraph": "Iceland has a total of three National Parks: Thingvellir, Vatnajokull and Snæfellsjökull. Each of the three parks encapsulate some of Iceland's most respectful geological, historical and cultural areas of the country. Inside Thingvellir is Iceland’s oldest national park. Here visitors can witness the beauty of “Lake Of The Parliament”. Bottom of this lake was naturally formed by an eruption of a volcano that happened about 9000 years ago.",
         "articleHiddenParagraph": "Today the lake covers 84m2 of land and is the first thing that visitors who travel from the capital to national park, can see before entering the park. Thingvellir park is also known for being the only place in Europe where visitors can see both North American and Eurasian tectonic plates. Vatnajokull is Iceland’s largest national park. It got its name after Vatna Glacier, where visitors can go and explore ice caves, vitness countries' tallest mountain tops and highest waterfalls.",
         "spanClass": "national-parks"
+    },
+    {
+        "articleImage": "assets/images/section2-1smallpicture.jpg",
+        "articleHeading": "Stokksness",
+        "articleParagraph": "Stokksness also known as Vestrahorn, is a headland found in the southeastern part of Iceland. It is about 17km by road from the fishing town Hofn. Here you can enjoy a beautiful view of Vestrahorn. A Mountain with peaks reaching up to 454 meters. Vestrahorn is a famous and well known attraction in the Stokksness area. It is visited by many tourists, photographers and film makes. Its unique beauty and natural setting around it are what sets it apart from the other mountains.",
+        "articleHiddenParagraph": "Setting around the mountain is flat, painted mostly by black sand beach and some grass foliage that creates a perfect contrast between the strong dark colors of the mountain and the greens and blues of grass and water.",
+        "spanClass": "stokksness"
+    },
+    {
+        "articleImage": "assets/images/section2-2smallpicture.jpg",
+        "articleHeading": "Fjadrargljufur Canyon",
+        "articleParagraph": "This canyon is found on the South Eastern Coast of Iceland. One of the most fascinating facts about the canyon is that it originates back from the period of IceAge, about two and a half million years ago. The Canyon is about 2 km long and in some parts up 100m deep. Canyon was created by progressive erosion that resulted from continued melting of ice and snow in this area. In 2019 Fjadrargljufur Canyon appeared on Justin Bieber’s music video.",
+        "articleHiddenParagraph": "That is why in the same year authorities decided to close the canyon for visitors. However nowadays it is possible to visit the canyon but we advise you to contact local guides before you do so due to continuous change of regulations of this place.",
+        "spanClass": "fjadrargljufur-canyon"
     }
 ]
