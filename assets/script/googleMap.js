@@ -43,12 +43,11 @@ function initMap() {
     document.getElementById('src-btn').addEventListener('click', function () {
         deleteMarkers();
         geocodeAddress(geocoder, map, selectType[0]);
-        importArticles(articlesContainer);
     });
 }
 
 
-function geocodeAddress(geocoder, resultsMap, placeType) {
+function geocodeAddress(geocoder, resultsMap, placeType, articlesContainer) {
     var address = document.getElementById('address').value; // Gets input from location input bar
 
     geocoder.geocode({ 'address': address }, function (results, status) {
@@ -63,6 +62,7 @@ function geocodeAddress(geocoder, resultsMap, placeType) {
             // Changes the innerHTML of div element to location searched and adds <ul> 
             document.getElementById('locationName').innerHTML = '<div class="row">' + '<div class="col-12">' + '<h2 class="text-center mt-3 mt-lg-1">' + address + '</h2>' + '</div>' + '</div>' + '<div class="row">' + '<div class="col-12" id="right-panel">' + '<ul id="places" class="places-list-style"></ul>' + "</div>" + "</div>";
             findNearbyPlaces(lat, lng, resultsMap, placeType);
+            importArticles(articlesContainer);
         } else {
             alert('Geocode was not successful for the follwoing reason:' + status);
         }
