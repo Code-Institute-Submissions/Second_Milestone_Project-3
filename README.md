@@ -54,32 +54,53 @@ The second input field is an input box that together with the help of Google API
 Once the user has filled in the data he/she can then click the "search" button, which triggers a function that takes the data and uses it to make requests to Google API services.
 After requests were made it sets markers on google map and creates a list of all the places of the same type found nearby the location searched as well as a single red marker that represents the location of the city.
 
-Two other features:
+Three other features:
 
-- First request made to Google API is to set Google Map. On second successfull request where geolocation is inisiated a function is ran that uses ajax method to get JSON data from [assets/ajax](https://github.com/Manojlovic1998/Second_Milestone_Project/blob/master/assets/ajax/articles.json).
-This function gets the data and uses template provided on the bottom of location.html page to run a loop that queries template, makes a copy of it, inputs data to the copy of the template and apends the template to an empty container.
-This way articles can be added inside JSON file and there won't be any need to create new elements as loop usses 
+- Ajax: 
+    - On second successful request where geolocation is initiated a function is ran that uses ajax method to get JSON data from [assets/ajax](https://github.com/Manojlovic1998/Second_Milestone_Project/blob/master/assets/ajax/articles.json).
+    This function gets the data and uses a template provided on the bottom of location.html page to run a loop that queries the template, makes a copy of it, inputs data to the copy of the template and appends the template to an empty container.
+    This way articles can be added inside JSON file and there won't be any need to create new elements as loop does this for us using premade template.
 
+- EmailJS:
+    - Website has a contact feature available on contactus.html page, where users can use the form to send us an email. This feature was set using [EmailJS](https://www.emailjs.com/) service.
+    User gets to fill 3 input fields, "Full Name", "Email", and "Message". Once all the input fields have been filled, the user can click the send button which takes the data and uses EmailJS service to send us an email using the template that we have set on Emailjs to format the data accordingly. 
+ 
+ - Intersection Observer:
+    - Intersection Observer API is used to load in text and images, creating a fade in animation that is made by utilising CSS style and JS logic through a callback function that uses the API observer to set and remove classes. 
 
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Google API - allows user to search for cities within Iceland and find nearby places of interest by inputing data inside two search boxes on "locations.html" page.
+- Email JS 2 - allows the user to send email to the admin of the page by inputting data inside a form on "contactus.html" page.
+- Intersection Observer - allows the user to scroll down the page and reveal more content with smooth transition that adds to professional look and feel of website.
 
 ### Features Left to Implement
-- Another feature idea
+
+- In future I would like to have only one page where once any anchor is clicked the page will load new content in place of the old one. 
+Example of this would be, once the navigation link is clicked then only new content of the page is loaded instead of having the whole page load again. For this I would use JSON file, template elements and JS logic.
+What this would allow me is that I would be able to change the content easily inside a JSON file without ever having to do it through html. So in case I want to change images, article texts, article headings I could do it all just by updating JSON file.
+This would also allow me to create a new feature where after reading an article about some location, the user can click a button which will automatically initiate a function that will load the map and display the location of the place that user has just read about.
+
 
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
+- [Bootstrap](https://getbootstrap.com/)
+    - The project uses **Bootstrap** to provide a responsive toolkit for building the base of the website.
+- [Imgur](https://imgur.com/)
+    - The project uses **Imgur** for hosting image content for the website.
+- [Fontawesome](https://fontawesome.com/)
+    - The project uses **Fontawesome** in order to use icons for the website.
+- [Fonts Google](https://fonts.google.com/)
+    - The project uses **Google Fonts** for changing the font family.
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 - [GoogleMapApi](https://cloud.google.com/maps-platform/?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_267331561093-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+EXA_+M:1_EMEAOt_EN_API_SQR-KWID_43700024190182920-kwd-295562633747-userloc_9040282&utm_term=KW_google%20map%20api-ST_google+map+api&gclid=CjwKCAjw_LL2BRAkEiwAv2Y3SYGH_hAATPE2gVHTbRN6fIqfiwXeclmiHHa7CNtldw1sCLV0vF7IVhoCghcQAvD_BwE)
     - The project uses **GoogleMapApi** to provide Google Map, Geolocation and Google Places service.
+- [EmaiJS](https://www.emailjs.com/)
+    - The project uses **EmailJS** to provide service for sending emails from the website.
+
 ## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
