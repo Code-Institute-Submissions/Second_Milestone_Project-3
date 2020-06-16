@@ -1,25 +1,24 @@
 # HTML CSS & JS Quiz
  
 This is a travel website that users can use to find out more about Iceland, its cities, attractions, natural wonders and more. 
-Travel website allows users who have not yet traveled to Iceland, to find more about their destination that they would like to visit. 
-By using the website's search bar they can pick cities and what they would like to do there, the website will then display this destination on google map and show locations of interest to the user. 
+Travel website allows user who has not yet traveled to Iceland, to find more about his destination of travel and what they would like to visit. 
+Using two search bars on website they can pick location and nearbyplaces they would like to search for, the website will then display this destination on google map and show locations of interest to the user. 
 Furthermore it will also showcase articles about different attractions depending on the city that user has searched for.
  
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
- 
 Strategy plane:
 - I aim to build a fully functional HTML, CSS and JS travel website that will give newcomers a place where they can go and find out more about Iceland.
  
 - As a user type, I want to use the website to find out more about travel destinations of my interest.
 - As a user type, I want to be able to search for more locations and go through articles. 
 - As a user type, I want to have an insight of what different cities have to offer in terms of attractions, hotels, food and restaurants...
+- As a user type, I would like to contact the website admin in case of any questions.
  
 Scope plane:
 - User should be able to search for their location using search bar.
 - There should be articles about different tourist attractions in Iceland. 
-- Different articles should be displayed on location page depending on what city did use searched for.
+- Articles should be displayed on location page after user has provided the input and clicked the "search" button.
+- There should be "Contact Us" page that that be used in case user has any questions or would like to contact the admin of the page.
  
 Structure plane:
 - User Interface:
@@ -31,7 +30,7 @@ Skeleton plane:
 - There should always be a menu or exit button available, so that users can have freedom to navigate between different pages.
 - Information content:
     - Well explained "Attraction" section.
-    - Clear landing page, easy to use.
+    - Clear and easy to use landing page.
  
 Structure plane:
 - Color theme for this project will be generated using the following color palette generator [Coolors](https://coolors.co).
@@ -40,12 +39,28 @@ Structure plane:
 - Animations should be used where necessary making the website more interactive and more appealing to the users eye.
 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+All wireframes used for this project can be found on my GitHub at [Manojlovic1998](https://github.com/Manojlovic1998/Second_Milestone_Project/tree/master/assets/wireFrame).
 
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
+
+
+Main feature:
+
+- Main feature of this project are the two search bars which allow user to input data that is then used by Google API services, Google Map, Geolocation and GooglePlaces.
+The first input field is a select box where the user can pick which type of place he would like to search for, Tourist Attractions, Hotels or Food and Restaurants.
+The second input field is an input box that together with the help of Google API autocomplete function, allows the user to search for any city within Iceland.
+Once the user has filled in the data he/she can then click the "search" button, which triggers a function that takes the data and uses it to make requests to Google API services.
+After requests were made it sets markers on google map and creates a list of all the places of the same type found nearby the location searched as well as a single red marker that represents the location of the city.
+
+Two other features:
+
+- First request made to Google API is to set Google Map. On second successfull request where geolocation is inisiated a function is ran that uses ajax method to get JSON data from [assets/ajax](https://github.com/Manojlovic1998/Second_Milestone_Project/blob/master/assets/ajax/articles.json).
+This function gets the data and uses template provided on the bottom of location.html page to run a loop that queries template, makes a copy of it, inputs data to the copy of the template and apends the template to an empty container.
+This way articles can be added inside JSON file and there won't be any need to create new elements as loop usses 
+
+
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
 - ...
