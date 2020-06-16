@@ -1,12 +1,11 @@
-var places, infoWindow;
-var mainMarker = [];
-var nearbyPlaces = [];
-var autocomplete;
-var countryRestrict = { 'country': 'IS' };
+let mainMarker = [];
+let nearbyPlaces = [];
+let autocomplete;
+let countryRestrict = { 'country': 'IS' };
 
 
-var articleTemplate = document.getElementById('article-template').content;
-var articlesContainer = document.getElementById('articles-container');
+let articleTemplate = document.getElementById('article-template').content;
+let articlesContainer = document.getElementById('articles-container');
 
 
 //Initializing fucntion
@@ -17,8 +16,8 @@ function initialize() {
 
 function initMap() {
 
-    var iceland = { lat: 64.128288, lng: -21.827774 }
-    var map = new google.maps.Map(document.getElementById('map'),
+    let iceland = { lat: 64.128288, lng: -21.827774 }
+    let map = new google.maps.Map(document.getElementById('map'),
         {
             zoom: 12,
             center: iceland,
@@ -29,35 +28,35 @@ function initMap() {
             },
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-    var selectType = [];
+    let selectType = [];
 
     $("select.select-box").change(function () {
         selectType = [];
-        var typeVal = $(this).children("option:selected").val();
+        let typeVal = $(this).children("option:selected").val();
         selectType.push(typeVal)
         console.log(selectType)
     });
 
-    var geocoder = new google.maps.Geocoder(map);
+    let geocoder = new google.maps.Geocoder(map);
 
     document.getElementById('src-btn').addEventListener('click', function () {
         deleteMarkers();
-        geocodeAddress(geocoder, map, selectType[0]);
+        geocodeAddress(geocoder, map, selectType[0], articlesContainer);
     });
 }
 
 
 function geocodeAddress(geocoder, resultsMap, placeType, articlesContainer) {
-    var address = document.getElementById('address').value; // Gets input from location input bar
+    let address = document.getElementById('address').value; // Gets input from location input bar
 
     geocoder.geocode({ 'address': address }, function (results, status) {
         if (status === 'OK') {
             resultsMap.panTo(results[0].geometry.location);
             resultsMap.setZoom(14);
 
-            var lat = results[0].geometry.location.lat();
-            var lng = results[0].geometry.location.lng();
-            var marker = new google.maps.Marker({ map: resultsMap, position: results[0].geometry.location });
+            let lat = results[0].geometry.location.lat();
+            let lng = results[0].geometry.location.lng();
+            let marker = new google.maps.Marker({ map: resultsMap, position: results[0].geometry.location });
             mainMarker.push(marker);
             // Changes the innerHTML of div element to location searched and adds <ul> 
             document.getElementById('locationName').innerHTML = '<div class="row">' + '<div class="col-12">' + '<h2 class="text-center mt-3 mt-lg-1">' + address + '</h2>' + '</div>' + '</div>' + '<div class="row">' + '<div class="col-12" id="right-panel">' + '<ul id="places" class="places-list-style"></ul>' + "</div>" + "</div>";
@@ -79,13 +78,14 @@ function initAutocomplete() {
 }
 
 function findNearbyPlaces(lat, lng, map, placeType) {
-    var locationCoord = new google.maps.LatLng(lat, lng);
-    var request = { location: locationCoord, radius: '500', type: placeType };
-    var service = new google.maps.places.PlacesService(map);
+    let locationCoord = new google.maps.LatLng(lat, lng);
+    let request = { location: locationCoord, radius: '500', type: placeType };
+    let service = new google.maps.places.PlacesService(map);
 
     service.nearbySearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
+            console.log(results);
+            for (let i = 0; i < results.length; i++) {
                 createMarker(results[i], map);
             }
         }
@@ -94,10 +94,11 @@ function findNearbyPlaces(lat, lng, map, placeType) {
 }
 
 function createMarker(place, map) {
-    var placeLoc = place.geometry.location;
-    var placesList = document.getElementById('places');
+    let placeLoc = place.geometry.location;
+    let placesList = document.getElementById('places');
+    let infowindow = new google.maps.InfoWindow();
 
-    var image = {
+    let image = {
         url: place.icon,
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
@@ -105,25 +106,31 @@ function createMarker(place, map) {
         scaledSize: new google.maps.Size(25, 25)
     };
 
-    var placesMarker = new google.maps.Marker({
+    let placesMarker = new google.maps.Marker({
         map: map,
         title: place.name,
         position: placeLoc,
         icon: image
     });
 
+    google.maps.event.addListener(placesMarker, 'click', function() {
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+            place.rating + '</div>');
+            infowindow.open(map, this);
+    });
+
     nearbyPlaces.push(placesMarker);
-    var li = document.createElement('li');
+    let li = document.createElement('li');
     li.textContent = place.name;
     placesList.appendChild(li);
 }
 
 
 function setMapOnAll(map) {
-    for (var i = 0; i < nearbyPlaces.length; i++) {
+    for (let i = 0; i < nearbyPlaces.length; i++) {
         nearbyPlaces[i].setMap(map);
     }
-    for (var i = 0; i < mainMarker.length; i++) {
+    for (let i = 0; i < mainMarker.length; i++) {
         mainMarker[i].setMap(map);
     }
 }
@@ -148,9 +155,7 @@ function deleteMarkers() {
 function importArticles(articlesContainer) {
     $.getJSON("assets/ajax/articles.json", function (data) {
         for (i = 0; i < data.length; i++) {
-            var templateHtmlCopy = document.importNode(articleTemplate, true);
-            let hiddenText = '.' + data[i].spanClass;
-            let btnId = '#' + data[i].spanClass;
+            let templateHtmlCopy = document.importNode(articleTemplate, true);
             
             templateHtmlCopy.querySelector('.article-mobile-image').setAttribute('src', data[i].articleImage);
             templateHtmlCopy.querySelector('.article-heading').textContent = data[i].articleHeading;
