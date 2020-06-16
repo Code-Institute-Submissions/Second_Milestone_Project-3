@@ -155,8 +155,12 @@ html {
   }
 
 .scroll-prevent {
-  height: 100vh;
-  overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 @media (min-width: 576px) {
@@ -225,8 +229,12 @@ html {
 }
 
 .scroll-prevent {
-  height: initial;
-  overflow: initial;
+  position: initial;
+    top: 0;
+    left: 0;
+    height: initial;
+    width: initial;
+    overflow: initial;
 }
 }
 
