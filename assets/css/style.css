@@ -160,14 +160,6 @@ html {
     overflow: hidden;
 }
 
-@media (min-width: 576px) {
-  
-}
-
-@media (min-width: 768px) {
-
-}
-
 @media (min-width: 992px) {
   .sidenav {
     width: 100%; /* 0 width - change this with JavaScript */
@@ -238,7 +230,7 @@ html {
   /* Hero Section */
 
   .callout-container-img-bg {
-    height: 80vh;
+    height: 35rem;
     background: url(https://i.imgur.com/VW1yLft.jpg) no-repeat center top fixed;
     background-size: cover;
     display: -webkit-box;
@@ -265,7 +257,7 @@ html {
     top: 0;
     overflow: hidden;
     left: 0;
-    height: 80vh;
+    height: 100%;
     width: 100%;   
   }
 
@@ -316,11 +308,6 @@ html {
     width: 12.3rem;
 }
 
-/* .section1-img--overflow {
-    overflow: hidden;
-    max-height: 20vh;
-} */
-
 .overlay-color--black {
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
@@ -340,15 +327,6 @@ html {
   left: 1.25rem;
   color: #fff;
   font-size: 0.6rem;
-}
-
-
-@media (min-width: 576px) {
-  
-}
-
-@media (min-width: 768px) {
-  
 }
 
 @media (min-width: 992px) {
@@ -394,15 +372,6 @@ html {
   width: fit-content;
 }
 
-
-@media (min-width: 576px) {
-  
-}
-
-@media (min-width: 768px) {
-  
-}
-
 @media (min-width: 992px) {
   .section3-img-text--position {
     position: relative;
@@ -440,9 +409,6 @@ html {
     bottom: 0;
   }
 }
-
-
-
 
 /* BTN */
 
@@ -514,15 +480,6 @@ html {
     opacity: 1; /* Firefox */
     font-size: 0.8rem;
     text-align: center;
-  }
-
-
-  @media (min-width: 576px) {
-  
-  }
-  
-  @media (min-width: 768px) {
-    
   }
   
   @media (min-width: 992px) {
