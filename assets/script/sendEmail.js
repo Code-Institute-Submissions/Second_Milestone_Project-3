@@ -1,12 +1,12 @@
-var contactForm = $('#contactForm');
+let contactForm = $('#contactForm');
 
 contactForm.submit(function(event){
     event.preventDefault();
 
     
 
-    var service_id = "gmail";
-    var formTemplate_id = "milestone_project2";
+    let service_id = "gmail";
+    let formTemplate_id = "milestone_project2";
 
     contactForm.find("button").text("Sending...");
     emailjs.sendForm(service_id,formTemplate_id,contactForm[0]) //contactForm[0] gets values from input bars
