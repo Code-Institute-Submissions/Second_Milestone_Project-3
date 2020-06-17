@@ -3,7 +3,7 @@
 This is a travel website that users can use to find out more about Iceland, its cities, attractions, natural wonders and more. 
 Travel website allows user who has not yet traveled to Iceland, to find more about his destination of travel and what they would like to visit. 
 Using two search bars on website they can pick location and nearbyplaces they would like to search for, the website will then display this destination on google map and show locations of interest to the user. 
-Furthermore it will also showcase articles about different attractions depending on the city that user has searched for.
+Furthermore it will also showcase articles about different attractions.
  
 ## UX
 Strategy plane:
@@ -18,7 +18,7 @@ Scope plane:
 - User should be able to search for their location using search bar.
 - There should be articles about different tourist attractions in Iceland. 
 - Articles should be displayed on location page after user has provided the input and clicked the "search" button.
-- There should be "Contact Us" page that that be used in case user has any questions or would like to contact the admin of the page.
+- There should be "Contact Us" page that can be used in case user has any questions or would like to contact the admin of the page.
  
 Structure plane:
 - User Interface:
@@ -34,8 +34,7 @@ Skeleton plane:
  
 Structure plane:
 - Color theme for this project will be generated using the following color palette generator [Coolors](https://coolors.co).
-- Design should be kept simple, clear and easy to understand. It should not be overcrowded with unnecessary information as this can confuse the first time user.
-- There should be loading animation present when new articles are loaded. 
+- Design should be kept simple, clear and easy to understand. It should not be overcrowded with unnecessary information as this can confuse the first time user. 
 - Animations should be used where necessary making the website more interactive and more appealing to the users eye.
 
 
@@ -43,16 +42,13 @@ All wireframes used for this project can be found on my GitHub at [Manojlovic199
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-
-
 Main feature:
 
-- Main feature of this project are the two search bars which allow user to input data that is then used by Google API services, Google Map, Geolocation and GooglePlaces.
+- Main features of this project are the two search bars which allow user to input data that is then used by Google API services, Google Map, Geolocation and GooglePlaces.
 The first input field is a select box where the user can pick which type of place he would like to search for, Tourist Attractions, Hotels or Food and Restaurants.
-The second input field is an input box that together with the help of Google API autocomplete function, allows the user to search for any city within Iceland.
+The second input field is an input box that together with the help of Google API autocomplete function allows the user to search for any city within Iceland.
 Once the user has filled in the data he/she can then click the "search" button, which triggers a function that takes the data and uses it to make requests to Google API services.
-After requests were made it sets markers on google map and creates a list of all the places of the same type found nearby the location searched as well as a single red marker that represents the location of the city.
+After requests were made it sets markers on google map and creates a list of all the places of the same type found near the location searched as well as a single red marker that represents the location of the city.
 
 Three other features:
 
@@ -78,13 +74,11 @@ Three other features:
 
 - In future I would like to have only one page where once any anchor is clicked the page will load new content in place of the old one. 
 Example of this would be, once the navigation link is clicked then only new content of the page is loaded instead of having the whole page load again. For this I would use JSON file, template elements and JS logic.
-What this would allow me is that I would be able to change the content easily inside a JSON file without ever having to do it through html. So in case I want to change images, article texts, article headings I could do it all just by updating JSON file.
+What this would allow me to do is that I would be able to change the content easily inside a JSON file without ever having to do it through html. So in case I want to change images, article texts, article headings I could do it all just by updating JSON file.
 This would also allow me to create a new feature where after reading an article about some location, the user can click a button which will automatically initiate a function that will load the map and display the location of the place that user has just read about.
 
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - [Bootstrap](https://getbootstrap.com/)
     - The project uses **Bootstrap** to provide a responsive toolkit for building the base of the website.
@@ -104,12 +98,62 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Here is the list of all manually tested user stories:
+
+1. Page anchor tags:
+    1. Go to the "Discover" page.
+    2. Try to click on the brand logo "Iceland Travel'' found in the top left corner it should reload the page.
+    3. Try to repeat the same process for all of the anchor tags present on the "Discover '' page, each anchor should lead to another page or its content.
+    4. Go to the "Attractions" page.
+    5. Try to click on the brand logo "Iceland Travel'' found in the top left corner it should reload the page.
+    6. Try to repeat the same process for all of the anchor tags present on the "Attractions" page, each anchor should lead to another page or its content.
+    7. Go to the "Locations" page.
+    8. Try to click on the brand logo "Iceland '' found in the top left corner it should reload the page.
+    9. Try to repeat the same process for all of the anchor tags present on the "Locations" page, each anchor should lead to another page or its content.
+    10. Go to "Contactus" page.
+    11. Try to click on the brand logo "Iceland Travel'' found in the top left corner it should reload the page.
+    12. Try to repeat the same process for all of the anchor tags present on "Contactus" page, each anchor should lead to another page or its content.
+
+2. Navigation bar:
+    1. Go to the "Discover" page. 
+    2. Try to downsize the browser window, at one point navigation links should collapse into hamburger icons.
+    3. Try to click the hamburger icon, it should open a mobile navigation menu.
+    4. Try to scroll up or down while the menu is open.
+    5. Try to increase browser window size while nav is open, at one point links should go back to their initial positions.
+    6. Try to scroll up and down again, scroll should work again.
+
+3. Attractions page button:
+    1. Go to the "Attractions" page.
+    2. Try to click on the first "show more" button, it should display the hidden text of the article above it. 
+    3. Try to click again on the same button, it should hide part of the text displayed above it. 
+    3. Try to repeat the clicking process for all the other "show more" buttons.
+
+4. Locations page input fields:
+    1. Go to the "Locations" page.
+    2. Try to click the "search" button without any input, the website should display an alert saying "Geocode was not successful for the following reason:INVALID_REQUEST".
+    4. Try to click on the first input box and pick any of the three options.
+    5. Try to click the "search" button with just one input filled, the website should display an alert saying "Geocode was not successful for the following reason:INVALID_REQUEST".
+    6. Try to click on the second input box and type in the location of any city in Iceland.
+    7. Try to click the "search" button with both inputs filled, the website should set markers on google map, there should be a list with names of all the marked locations, attraction articles will be displayed under the map and list section.
+    8. Reload the "Locations" page this should clear all of the inputs.
+    9. Try to click on the second input filled and type in any city in Iceland.
+    10. Try to click the "search" button with just the second input filled, the website should set markers with different icons depending on location type, there should be a list with names of all the marked locations, attraction articles will be displayed under the map and list section.
+
+5. Location page buttons: 
+    1. Go to the "Locations" page.
+    2. Try to input data into both fields.
+    3. Try to click the "search" button, the website should set markers on google map, there should be a list with names of all the marked locations, attraction articles will be displayed under the map and list section.
+    5. Try to click on the "show more" button under the first article, it should reveal hidden text above the button.
+    6. Try to click again on the same button, it should hide part of the text displayed above it.
+    7. Try to repeat the clicking process for all the other "show more" buttons.
+
+
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
+3. Contact form:
     1. Go to the "Contact Us" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
