@@ -200,17 +200,21 @@ Deployment step by step process:
  5. In order to have a functional Google Map you will have to create your own API key as the key in this project was restricted when deployed.
 
 
-
-
-
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text for articles used on this website was created after reading articles on:
+ 1. [Wikipedia](https://www.wikipedia.org/) 
+ 2. [iceland Travel](https://www.icelandtravel.is/) 
+ 3. [Blue Lagoon](https://www.bluelagoon.com/)
+ 4. [Iceland Nordic Visitor](https://iceland.nordicvisitor.com/)
 
 ### Media
-- The photos used in this site were obtained from ...
+
+- The photos used in this site were obtained from [Unsplash.com](https://unsplash.com/).
+- UI design idea for wireframe was obtained from [sketchappsources.com](https://www.sketchappsources.com/free-source/3654-travel-landing-page-sketch-freebie-resource.html).
+
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from Code Institute school lessons.
