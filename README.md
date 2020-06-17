@@ -147,26 +147,18 @@ Here is the list of all manually tested user stories:
     6. Try to click again on the same button, it should hide part of the text displayed above it.
     7. Try to repeat the clicking process for all the other "show more" buttons.
 
-6. Contact Us page contact form: 
-    1. Go to the "Contact Us" page 
+6. Locations Page Markers:
+    1. Go to the "Locations" page.
+    2. Try to input data into both fields.
+    3. Try to click the "search" button, the website should set markers on google map, there should be a list with names of all the marked locations, attraction articles will be displayed under the map and list section.
+    4. Try to click any marker icon displayed on google map, it should open a "pop-up" window above it that contains place name and place rating.
+    5. Try to click on "x" icon found in top right corner of this "pop-up" window, this should close the window. 
 
-
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-3. Contact form:
+7. Contact Us page contact form: 
     1. Go to the "Contact Us" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
