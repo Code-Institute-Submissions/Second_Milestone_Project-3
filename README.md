@@ -97,7 +97,6 @@ This would also allow me to create a new feature where after reading an article 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 Here is the list of all manually tested user stories:
 
 1. Page anchor tags:
@@ -160,16 +159,48 @@ Here is the list of all manually tested user stories:
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
+
+Using Bootstrap layout, and mobile fist development method, it allowed me to create a responsive website. All of the content resizes appropriately to the size of the displayed screen.
+This was tested using Google's Inspect Tool that allowed me to resize the screen and see how my website responds to different device screen sizes. 
+It also allowed to to display website in a horizontal phone view, this way I found a problem with height units, "vh", that I intialy used to set the background image.
+I have fixed the issue by replacing unit, using rem insted of vh.
+
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+For this project I used [Github](https://github.com/) platform, where I created [repository](https://github.com/Manojlovic1998/Second_Milestone_Project) using a template provided to me by [Code Institute](https://codeinstitute.net/).
+Once repository was created, I have used browser IDE addon for GitHub called [GitPod](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki?hl=en), to open the repository.
+This online IDE that allowed me to access repository as, ["Gitpod knows where you are coming from and beams you into the right context."](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki?hl=en).
+Using this IDE I was able to make my commits and push all of my code to the [Github](https://github.com/).
+ 
+Deployment step by step process:
+1. Go to [repository](https://github.com/Manojlovic1998/Second_Milestone_Project).
+2. In [repository](https://github.com/Manojlovic1998/Second_Milestone_Project) page click on [settings](https://github.com/Manojlovic1998/Second_Milestone_Project/settings).
+3. In [settings](https://github.com/Manojlovic1998/Second_Milestone_Project/settings) scroll down to "GitHub Pages" section.
+4. In "Github Pages" click on the first dropdown, found under the Source subheading.
+5. Select the branch where you pushed your files, in my case that would be "master branch".
+6. Once you click on "master branch", the page will reload.
+7. Scroll down again back to the "GitHub Pages" section inside [settings](https://github.com/Manojlovic1998/Second_Milestone_Project/settings).
+8. In the top part of "GitHub Pages" section you will find text saying "Your site is published at ..." and it will include the link to the deployed website.
+9. Try to click on the link, it should open deployed version of your website.
+10. In case browser failed to load the website, you need to wait 2-5 minutes as sometimes it knows to take longer for website to be deployed.
+11. After you have waited 2-5min, you can try to open the website again using the link found in the "GitHub pages" section.
+12. Website is now deployed and online.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+- Diffrence between development version and the deployed version is that:
+ 1. In deployed version, image jpg files have been downsized so that they get loaded faster.
+ 2. Google Maps API key was restricted after the website was deployed to prevent any misuse. 
+
+
+- Local Deployment:
+ 1. To run the code locally you can go to [Github repository](https://github.com/Manojlovic1998/Second_Milestone_Project).
+ 2. There you can download zip file that includes all of the files used to create this website. 
+ 3. Once you have dowloaded the files you can use IDE such as [VScode](https://code.visualstudio.com/) to open them.
+ 4. From there you use any addon that allows you to run the server locally. 
+ 5. In order to have a functional Google Map you will have to create your own API key as the key in this project was restricted when deployed.
+
+
+
 
 
 ## Credits
