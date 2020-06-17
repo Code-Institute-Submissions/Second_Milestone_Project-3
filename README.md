@@ -110,9 +110,9 @@ Here is the list of all manually tested user stories:
     7. Go to the "Locations" page.
     8. Try to click on the brand logo "Iceland '' found in the top left corner it should reload the page.
     9. Try to repeat the same process for all of the anchor tags present on the "Locations" page, each anchor should lead to another page or its content.
-    10. Go to "Contactus" page.
+    10. Go to "Contact Us" page.
     11. Try to click on the brand logo "Iceland Travel'' found in the top left corner it should reload the page.
-    12. Try to repeat the same process for all of the anchor tags present on "Contactus" page, each anchor should lead to another page or its content.
+    12. Try to repeat the same process for all of the anchor tags present on "Contact Us" page, each anchor should lead to another page or its content.
 
 2. Navigation bar:
     1. Go to the "Discover" page. 
@@ -146,6 +146,9 @@ Here is the list of all manually tested user stories:
     5. Try to click on the "show more" button under the first article, it should reveal hidden text above the button.
     6. Try to click again on the same button, it should hide part of the text displayed above it.
     7. Try to repeat the clicking process for all the other "show more" buttons.
+
+6. Contact Us page contact form: 
+    1. Go to the "Contact Us" page 
 
 
 
