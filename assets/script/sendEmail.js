@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  emailjs.init("user_uMuGSSF3tAvdDaO6bEES3");  
+})
+
 let contactForm = $('#contactForm');
 
 contactForm.submit(function(event){
