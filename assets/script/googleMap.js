@@ -8,11 +8,13 @@ let articleTemplate = document.getElementById('article-template').content;
 let articlesContainer = document.getElementById('articles-container');
 
 
-//Initializing fucntion
+//Initializing Fucntion, Called Back Inside GoogleMap Script On Location Page
 function initialize() {
     initMap();
     initAutocomplete();
 }
+
+//Sets Google Map On To The Page, Gets Type Value For NearbyPlaces Request, Creates Click Event Listner That Trigers API Requests and Logic
 
 function initMap() {
 
@@ -34,7 +36,6 @@ function initMap() {
         selectType = [];
         let typeVal = $(this).children("option:selected").val();
         selectType.push(typeVal);
-        console.log(selectType);
     });
 
     let geocoder = new google.maps.Geocoder(map);
@@ -45,9 +46,9 @@ function initMap() {
     });
 }
 
-
+// Gets Input Passed From InputBars And Uses it to Geolocate City And Set Marker On It
 function geocodeAddress(geocoder, resultsMap, placeType, articlesContainer) {
-    let address = document.getElementById('address').value; // Gets input from location input bar
+    let address = document.getElementById('address').value; 
 
     geocoder.geocode({ 'address': address }, function (results, status) {
         if (status === 'OK') {
@@ -60,7 +61,9 @@ function geocodeAddress(geocoder, resultsMap, placeType, articlesContainer) {
             mainMarker.push(marker);
             // Changes the innerHTML of div element to location searched and adds <ul> 
             document.getElementById('locationName').innerHTML = '<div class="row">' + '<div class="col-12">' + '<h2 class="text-center mt-3 mt-lg-1">' + address + '</h2>' + '</div>' + '</div>' + '<div class="row">' + '<div class="col-12" id="right-panel">' + '<ul id="places" class="places-list-style"></ul>' + "</div>" + "</div>";
+            //Uses Cordinates Of Geolocation And Type Of Place From Select Bar To Create Request Based On Area Radius That Outputs And Sets Markers On All Nearby Places
             findNearbyPlaces(lat, lng, resultsMap, placeType);
+            //Gets JSON Data And Fills in Template Creating Articles On The Page
             importArticles(articlesContainer);
         } else {
             alert('Geocode was not successful for the follwoing reason:' + status);
@@ -77,6 +80,7 @@ function initAutocomplete() {
     autocomplete.setFields(['address_component']);
 }
 
+//Uses Cordinates Of Geolocation And Type Of Place From Select Bar To Create Request Based On Area Radius That Outputs And Sets Markers On All Nearby Places
 function findNearbyPlaces(lat, lng, map, placeType) {
     let locationCoord = new google.maps.LatLng(lat, lng);
     let request = { location: locationCoord, radius: '500', type: placeType };
@@ -84,7 +88,6 @@ function findNearbyPlaces(lat, lng, map, placeType) {
 
     service.nearbySearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-            console.log(results);
             for (let i = 0; i < results.length; i++) {
                 createMarker(results[i], map);
             }
@@ -152,6 +155,7 @@ function deleteMarkers() {
     nearbyPlaces = [];
 }
 
+//Gets JSON Data And Fills in Template Creating Articles On The Page
 function importArticles(articlesContainer) {
     $.getJSON("assets/ajax/articles.json", function (data) {
         for (i = 0; i < data.length; i++) {
