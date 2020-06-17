@@ -48,7 +48,7 @@ function initMap() {
 
 // Gets Input Passed From InputBars And Uses it to Geolocate City And Set Marker On It
 function geocodeAddress(geocoder, resultsMap, placeType, articlesContainer) {
-    let address = document.getElementById('address').value; 
+    let address = document.getElementById('address').value;
 
     geocoder.geocode({ 'address': address }, function (results, status) {
         if (status === 'OK') {
@@ -116,10 +116,10 @@ function createMarker(place, map) {
         icon: image
     });
 
-    google.maps.event.addListener(placesMarker, 'click', function() {
-            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + 'Rating:' +
+    google.maps.event.addListener(placesMarker, 'click', function () {
+        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + 'Rating:' +
             place.rating + '<i class="fas fa-star"></i>' + '</div>');
-            infowindow.open(map, this);
+        infowindow.open(map, this);
     });
 
     nearbyPlaces.push(placesMarker);
@@ -160,25 +160,25 @@ function importArticles(articlesContainer) {
     $.getJSON("assets/ajax/articles.json", function (data) {
         for (i = 0; i < data.length; i++) {
             let templateHtmlCopy = document.importNode(articleTemplate, true);
-            
+
             templateHtmlCopy.querySelector('.article-mobile-image').setAttribute('src', data[i].articleImage);
             templateHtmlCopy.querySelector('.article-heading').textContent = data[i].articleHeading;
             templateHtmlCopy.querySelector('.article-paragraph').innerHTML = data[i].articleParagraph + '<span class="' + data[i].spanClass + ' article-hidden-paragraph' + '">' + data[i].articleHiddenParagraph + '</span>';
             templateHtmlCopy.querySelector('.article-desktop-image').setAttribute('src', data[i].articleImage);
             templateHtmlCopy.querySelector('.attractions-btn').setAttribute('data-value', data[i].spanClass);
             templateHtmlCopy.querySelector('.attractions-btn').setAttribute('id', data[0].spanClass);
-            
-                
+
+
             articlesContainer.appendChild(templateHtmlCopy);
-            
-            
+
+
         }
         $('.article-hidden-paragraph').hide();
-        $('.attractions-btn').on('click',function(event) {
-        let dataValue = $(this).attr("data-value");
-        let hiddenText = '.' + dataValue;
+        $('.attractions-btn').on('click', function (event) {
+            let dataValue = $(this).attr("data-value");
+            let hiddenText = '.' + dataValue;
 
-        $(hiddenText).slideToggle('slow');
-});
+            $(hiddenText).slideToggle('slow');
+        });
     });
 }
