@@ -1,3 +1,6 @@
+//Creates IntersectionObserver API Call That Is Ran As Soon DOM Is Loaded
+//Adds Class To Elements For Smooth Scroll Transitions
+
 document.addEventListener("DOMContentLoaded", () => {
 let observerOptions = {
     root: null,

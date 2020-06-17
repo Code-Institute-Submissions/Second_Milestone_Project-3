@@ -1,3 +1,6 @@
+//Gets Data From Contactus Page Form And Formats It Using Premade Template On EmailJS Website
+//Sends Email To Page Admin Gmail
+
 document.addEventListener("DOMContentLoaded", () => {
   emailjs.init("user_uMuGSSF3tAvdDaO6bEES3");  
 })
