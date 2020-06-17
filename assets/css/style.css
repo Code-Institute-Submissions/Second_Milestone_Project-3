@@ -13,9 +13,6 @@
 /* Typography */
 html {
     font-size: 1rem;
-    -webkit-transform: 0.5s;
-        -ms-transform: 0.5s;
-            transform: 0.5s;
   }
 
   h2 {
