@@ -189,7 +189,11 @@ Deployment step by step process:
 
 - Diffrence between development version and the deployed version is that:
  1. In deployed version, image jpg files have been downsized so that they get loaded faster.
- 2. Google Maps API key was restricted after the website was deployed to prevent any misuse. 
+ 2. Google Maps API key was restricted after the website was deployed to prevent any misuse.
+ 3. New articles have been added to deployed version compared to the development.
+ 4. In the deployed version each hero section has a black semi transparent background that improves readability of hero text.
+ 5. In the deployed version location page contains section with articles about cities that user might want to search for.
+
 
 
 - Local Deployment:
