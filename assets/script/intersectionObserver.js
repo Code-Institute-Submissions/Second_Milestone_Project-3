@@ -20,5 +20,5 @@ entries.forEach(entry => {
 
 allFadeIn.forEach(fader => {
     observer.observe(fader);
-})
+});
 });

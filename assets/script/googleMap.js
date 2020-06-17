@@ -16,7 +16,7 @@ function initialize() {
 
 function initMap() {
 
-    let iceland = { lat: 64.128288, lng: -21.827774 }
+    let iceland = { lat: 64.128288, lng: -21.827774 };
     let map = new google.maps.Map(document.getElementById('map'),
         {
             zoom: 12,
@@ -33,8 +33,8 @@ function initMap() {
     $("select.select-box").change(function () {
         selectType = [];
         let typeVal = $(this).children("option:selected").val();
-        selectType.push(typeVal)
-        console.log(selectType)
+        selectType.push(typeVal);
+        console.log(selectType);
     });
 
     let geocoder = new google.maps.Geocoder(map);
@@ -114,8 +114,8 @@ function createMarker(place, map) {
     });
 
     google.maps.event.addListener(placesMarker, 'click', function() {
-            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-            place.rating + '</div>');
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + 'Rating:' +
+            place.rating + '<i class="fas fa-star"></i>' + '</div>');
             infowindow.open(map, this);
     });
 
@@ -168,13 +168,13 @@ function importArticles(articlesContainer) {
             articlesContainer.appendChild(templateHtmlCopy);
             
             
-        };
+        }
         $('.article-hidden-paragraph').hide();
         $('.attractions-btn').on('click',function(event) {
         let dataValue = $(this).attr("data-value");
         let hiddenText = '.' + dataValue;
 
         $(hiddenText).slideToggle('slow');
-})
+});
     });
 }

@@ -69,8 +69,8 @@ html {
     z-index: 200; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#373B44), to(#4286f4));
     background: -o-linear-gradient(top, #373B44, #4286f4);
+    background: -webkit-gradient(linear, left top, left bottom, from(#373B44), to(#4286f4));
     background: linear-gradient(to bottom, #373B44, #4286f4);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
@@ -298,8 +298,8 @@ html {
 .icon-font-size {
     font-size: 3rem;
     background: #373B44;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-gradient(linear, left top, right top, from(#4286f4), to(#373B44));
     background: -o-linear-gradient(left, #4286f4, #373B44);
+    background: -webkit-gradient(linear, left top, right top, from(#4286f4), to(#373B44));
     background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -785,6 +785,8 @@ option {
 
 .fade-in {
   opacity: 0;
+  -webkit-transition: opacity 250ms ease-in;
+  -o-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
 }
 
